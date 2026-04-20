@@ -1,0 +1,92 @@
+﻿<Window x:Class="pokemonQuartett.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pokémon Quartett Deluxe" Height="700" Width="450" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#1A1A1D">
+        <StackPanel Margin="30">
+
+            <Border Background="#2D2D30" CornerRadius="10" Padding="10" Margin="0,0,0,20" BorderBrush="#FFD700" BorderThickness="1">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="AM ZUG: " Foreground="White" FontSize="18" VerticalAlignment="Center" Opacity="0.7"/>
+                    <TextBlock x:Name="AktuellerSpielerText" Text="Spieler 1" Foreground="#FFD700" FontSize="22" FontWeight="Bold" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <Border Background="#F2F2F2" CornerRadius="20" Padding="20" BorderBrush="#FFD700" BorderThickness="4">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="25" ShadowDepth="0" Opacity="0.7" Color="Black"/>
+                </Border.Effect>
+
+                <StackPanel>
+                    <TextBlock x:Name="PlayerNameText" FontSize="28" FontWeight="Bold" Text="Name" 
+                               HorizontalAlignment="Center" Foreground="#333" Margin="0,0,0,5"/>
+
+                    <TextBlock x:Name="PlayerTypText" Text="Typ" FontStyle="Italic" FontSize="16"
+                               HorizontalAlignment="Center" Foreground="#666" Margin="0,0,0,15"/>
+
+                    <Border Background="White" CornerRadius="10" Height="200" Margin="0,0,0,20" BorderBrush="#DDD" BorderThickness="2">
+                        <Image x:Name="PokemonBild" Stretch="Uniform" Margin="10"/>
+                    </Border>
+
+                    <TextBlock Text="Wähle deine Kategorie:" FontWeight="SemiBold" Margin="0,0,0,10" HorizontalAlignment="Center"/>
+
+                    <Button x:Name="BtnHP" Click="BtnKategorie_Click" Margin="0,4" Height="40" Background="#FF4B2B" Foreground="White" FontWeight="Bold">
+                        <TextBlock x:Name="PlayerHPText" Text="HP: 0"/>
+                    </Button>
+
+                    <Button x:Name="BtnAttack" Click="BtnKategorie_Click" Margin="0,4" Height="40" Background="#FF8C00" Foreground="White" FontWeight="Bold">
+                        <TextBlock x:Name="PlayerAttackText" Text="Attack: 0"/>
+                    </Button>
+
+                    <Button x:Name="BtnDefense" Click="BtnKategorie_Click" Margin="0,4" Height="40" Background="#1E90FF" Foreground="White" FontWeight="Bold">
+                        <TextBlock x:Name="PlayerDefenseText" Text="Defense: 0"/>
+                    </Button>
+                    <Button x:Name="BtnAspeed" Click="BtnKategorie_Click" Margin="0,4" Height="40" Background="#4CAF50" Foreground="White" FontWeight="Bold">
+                        <TextBlock x:Name="PlayerAspeedText" Text="Speed: 0"/>
+                    </Button>
+                </StackPanel>
+            </Border>
+
+            <UniformGrid Columns="2" Margin="0,30,0,0">
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock Text="SPIELER 1" Foreground="White" FontSize="12" HorizontalAlignment="Center" Opacity="0.7"/>
+                    <TextBlock x:Name="Spieler1KartenZaehler" Text="0 Karten" Foreground="#FFD700" FontSize="20" FontWeight="Bold"/>
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock Text="SPIELER 2" Foreground="White" FontSize="12" HorizontalAlignment="Center" Opacity="0.7"/>
+                    <TextBlock x:Name="Spieler2KartenZaehler" Text="0 Karten" Foreground="#FFD700" FontSize="20" FontWeight="Bold"/>
+                </StackPanel>
+            </UniformGrid>
+        </StackPanel>
+
+        <Grid x:Name="WinScreen" Visibility="Collapsed" Background="#F2000000">
+            <Border Background="#2D2D30" CornerRadius="30" Padding="40" 
+                    VerticalAlignment="Center" HorizontalAlignment="Center"
+                    BorderBrush="#FFD700" BorderThickness="3" Width="350">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="40" Color="Gold" Opacity="0.5"/>
+                </Border.Effect>
+
+                <StackPanel>
+                    <TextBlock x:Name="WinText" Text="SIEG!" FontSize="36" FontWeight="Bold" 
+                               Foreground="Gold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+                    <TextBlock x:Name="WinSubText" Text="Spieler 1 ist der neue Champion!" FontSize="16" 
+                               Foreground="White" Opacity="0.8" HorizontalAlignment="Center" Margin="0,0,0,30"/>
+
+                    <Button Content="NOCHMAL SPIELEN" Click="BtnRestart_Click" 
+                            Height="60" FontSize="18" FontWeight="Bold" 
+                            Background="#FFD700" Foreground="#1A1A1D" Cursor="Hand">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="15"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
