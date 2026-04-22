@@ -18,5 +18,17 @@ namespace pokemonQuartett
         public string BildPfad { get; set; }
 
 
+        //Trennung von Logik und Design. Gibt Wert basierend auf einer Zahl zurück
+        public int WertPerIndex(int index)
+        {
+            switch (index)
+            {
+                case 0: return HP;
+                case 1: return Attack;
+                case 2: return Defense;
+                case 3: return Aspeed;
+                default: return 0;
+            }
+        }
     }
 }

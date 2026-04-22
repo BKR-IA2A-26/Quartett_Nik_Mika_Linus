@@ -36,22 +36,27 @@ namespace pokemonQuartett
         }
         private void AktualisiereAnzeige() 
         {
-            if (spiel.Spieler1.Handstapel.Count > 0)
+            Spieler amZug = spiel.Spieler1.wähler ? spiel.Spieler1 : spiel.Spieler2; //Gucken wer dran ist
+
+            if (amZug.Handstapel.Count > 0)
             {
-                Pokemon aktuelle = spiel.Spieler1.Handstapel[0];
+                Pokemon aktuelle = amZug.Handstapel[0];
 
-                PlayerNameText.Text = aktuelle.Name;
+                AktuellerSpielerText.Text = amZug.Name; //Zeigt ob Spieler 1 oder 2
+                PlayerNameText.Text = aktuelle.Name;    
                 PlayerTypText.Text = "Typ: " + aktuelle.Typ;
-
                 PlayerHPText.Text = "HP: " + aktuelle.HP;
                 PlayerAttackText.Text = "Angriff: " + aktuelle.Attack;
                 PlayerDefenseText.Text = "Abwehr: " + aktuelle.Defense;
-                PlayerAspeedText.Text = "Attackspeed: " + aktuelle.Aspeed;
+                PlayerAspeedText.Text = "Speed: " + aktuelle.Aspeed;
 
-                
+                //KartenZähler
+                Spieler1KartenZaehler.Text = spiel.Spieler1.Handstapel.Count + " Karten";
+                Spieler2KartenZaehler.Text = spiel.Spieler2.Handstapel.Count + " Karten";
+
+                //Bilder wenn kein Bild = nichts
                 string ordnerPfad = @"C:\Users\Nik Steuernagel\Desktop\IA2A Schule\Software\pokemonQuartett\pokemonQuartett\Images\";
                 string vollerPfad = ordnerPfad + aktuelle.BildPfad;
-
 
                 if (System.IO.File.Exists(vollerPfad))
                 {
@@ -59,37 +64,35 @@ namespace pokemonQuartett
                 }
                 else
                 {
-
                     PokemonBild.Source = null;
                 }
 
-
-            }
-            else
-            {
-                MessageBox.Show("Das Spiel ist vorbei!");
             }
         }
 
         private void BtnKategorie_Click(object sender, RoutedEventArgs e)
         {
-            Button geklickterButton = (Button)sender;
+            Button geklickterButton = (Button)sender; 
+            int wahlIndex = -1;
 
-            string ergebnisText = spiel.Kampf(geklickterButton.Name);
+            //Werte => Index (Passend zur WertPerIndex)
+            if (geklickterButton.Name == "BtnHP") wahlIndex = 0;  
+            else if (geklickterButton.Name == "BtnAttack") wahlIndex= 1;
+            else if (geklickterButton.Name == "BtnDefense") wahlIndex = 2;
+            else if (geklickterButton.Name == "BtnAspeed") wahlIndex = 3;
+
+            string ergebnisText = spiel.Kampf(wahlIndex);
             MessageBox.Show(ergebnisText);
 
-            if (spiel.Spieler1.Handstapel.Count >= 32)
+            if(spiel.Spieler1.Handstapel.Count == 0 || spiel.Spieler2.Handstapel.Count == 0)
             {
-                WinText.Text = "  GEWONNEN🏆";
+                string gewinner = spiel.Spieler1.Handstapel.Count > 0 ? "Spieler 1" : "Spieler 2";
+                WinText.Text = gewinner + " Gewinnt!🏆";
                 WinScreen.Visibility = Visibility.Visible;
-            } else if (spiel.Spieler2.Handstapel.Count >= 32)
-            {
-                WinText.Text = "Verloren";
-                WinScreen.Visibility = Visibility.Visible;
-            } else
+            }else 
             {
                 AktualisiereAnzeige();
-            }            
+            }
         }
         private void BtnRestart_Click(object sender, RoutedEventArgs e)
         {
@@ -155,7 +158,7 @@ namespace pokemonQuartett
             liste.Add(new Pokemon { Name = "Kyogre", Typ = "Wasser", HP = 100, Attack = 100, Defense = 90, Aspeed = 90, BildPfad = "kyogre.png" });
             liste.Add(new Pokemon { Name = "Pikachu", Typ = "Drache/Flug", HP = 60, Attack = 70, Defense = 40, Aspeed = 65, BildPfad = "pikachu.png" });
             liste.Add(new Pokemon { Name = "Letarking", Typ = "Normal", HP = 120, Attack = 120, Defense = 120, Aspeed = 10, BildPfad = "letarking.png" }); 
-
+       
             return liste;
         }
     }

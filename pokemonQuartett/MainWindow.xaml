@@ -42,6 +42,7 @@
                     <Button x:Name="BtnDefense" Click="BtnKategorie_Click" Margin="0,4" Height="40" Background="#1E90FF" Foreground="White" FontWeight="Bold">
                         <TextBlock x:Name="PlayerDefenseText" Text="Defense: 0"/>
                     </Button>
+
                     <Button x:Name="BtnAspeed" Click="BtnKategorie_Click" Margin="0,4" Height="40" Background="#4CAF50" Foreground="White" FontWeight="Bold">
                         <TextBlock x:Name="PlayerAspeedText" Text="Speed: 0"/>
                     </Button>
@@ -64,21 +65,41 @@
         <Grid x:Name="WinScreen" Visibility="Collapsed" Background="#F2000000">
             <Border Background="#2D2D30" CornerRadius="30" Padding="40" 
                     VerticalAlignment="Center" HorizontalAlignment="Center"
-                    BorderBrush="#FFD700" BorderThickness="3" Width="350">
+                    BorderBrush="#FFD700" BorderThickness="3" 
+                    MaxWidth="400" MinWidth="350">
                 <Border.Effect>
                     <DropShadowEffect BlurRadius="40" Color="Gold" Opacity="0.5"/>
                 </Border.Effect>
 
                 <StackPanel>
-                    <TextBlock x:Name="WinText" Text="SIEG!" FontSize="36" FontWeight="Bold" 
-                               Foreground="Gold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="WinText" 
+                               Text="SIEG!" 
+                               FontSize="32" 
+                               FontWeight="Bold" 
+                               Foreground="Gold" 
+                               HorizontalAlignment="Center" 
+                               TextAlignment="Center" 
+                               TextWrapping="Wrap"
+                               Margin="0,0,0,10"/>
 
-                    <TextBlock x:Name="WinSubText" Text="Spieler 1 ist der neue Champion!" FontSize="16" 
-                               Foreground="White" Opacity="0.8" HorizontalAlignment="Center" Margin="0,0,0,30"/>
+                    <TextBlock x:Name="WinSubText" 
+                               Text="" 
+                               FontSize="18" 
+                               Foreground="White" 
+                               Opacity="0.8" 
+                               HorizontalAlignment="Center" 
+                               TextAlignment="Center" 
+                               TextWrapping="Wrap"
+                               Margin="0,0,0,30"/>
 
-                    <Button Content="NOCHMAL SPIELEN" Click="BtnRestart_Click" 
-                            Height="60" FontSize="18" FontWeight="Bold" 
-                            Background="#FFD700" Foreground="#1A1A1D" Cursor="Hand">
+                    <Button Content="NOCHMAL SPIELEN" 
+                            Click="BtnRestart_Click" 
+                            Height="60" 
+                            FontSize="18" 
+                            FontWeight="Bold" 
+                            Background="#FFD700" 
+                            Foreground="#1A1A1D" 
+                            Cursor="Hand">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="15"/>
