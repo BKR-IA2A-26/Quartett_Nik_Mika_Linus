@@ -98,107 +98,107 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\letarking.png">
+    <Resource Include="Images2\letarking.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\bauz.png">
+    <Resource Include="Images2\bauz.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Bisasam.png">
+    <Resource Include="Images2\Bisasam.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\chelast.png">
+    <Resource Include="Images2\chelast.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\chimpep.png">
+    <Resource Include="Images2\chimpep.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\endivie.png">
+    <Resource Include="Images2\endivie.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\felori.png">
+    <Resource Include="Images2\felori.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\feurigel.png">
+    <Resource Include="Images2\feurigel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\flamiau.png">
+    <Resource Include="Images2\flamiau.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\flemmli.png">
+    <Resource Include="Images2\flemmli.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\floink.png">
+    <Resource Include="Images2\floink.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\froxy.png">
+    <Resource Include="Images2\froxy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\fynx.png">
+    <Resource Include="Images2\fynx.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\geckarbor.png">
+    <Resource Include="Images2\geckarbor.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Glumanda.png">
+    <Resource Include="Images2\Glumanda.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\groudon.png">
+    <Resource Include="Images2\groudon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\hopplo.png">
+    <Resource Include="Images2\hopplo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\hydropi.png">
+    <Resource Include="Images2\hydropi.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\igamaro.png">
+    <Resource Include="Images2\igamaro.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\karnimani.png">
+    <Resource Include="Images2\karnimani.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\krokel.png">
+    <Resource Include="Images2\krokel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\kwaks.png">
+    <Resource Include="Images2\kwaks.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\kyogre.png">
+    <Resource Include="Images2\kyogre.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\memmeon.png">
+    <Resource Include="Images2\memmeon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\mewtu.png">
+    <Resource Include="Images2\mewtu.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\panflam.png">
+    <Resource Include="Images2\panflam.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\pikachu.png">
+    <Resource Include="Images2\pikachu.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\plinfa.png">
+    <Resource Include="Images2\plinfa.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\rayquaza.png">
+    <Resource Include="Images2\rayquaza.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\robball.png">
+    <Resource Include="Images2\robball.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Schiggy.png">
+    <Resource Include="Images2\Schiggy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\serpifeu.png">
+    <Resource Include="Images2\serpifeu.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\ottaro.png">
+    <Resource Include="Images2\ottaro.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
