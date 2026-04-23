@@ -64,7 +64,7 @@ namespace pokemonQuartett
                 }
                 else
                 {
-                    PokemonBild.Source = null; // Falls das Bild fehlt, wird kein Fehler geworfen, sondern das Feld geleert
+                    PokemonBild.Source = null; //Falls das Bild fehlt, wird kein Fehler geworfen, sondern das Feld geleert
                 }
             }
         }
