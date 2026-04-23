@@ -79,7 +79,6 @@ namespace pokemonQuartett
             }
             else
             {
-  
                 Spieler1.Handstapel.Add(p1);
                 Spieler2.Handstapel.Add(p2);
                 return "Unentschieden! Jeder behält seine Karte.";
