@@ -56,11 +56,20 @@ namespace pokemonQuartett
 
                 //Bilder wenn kein Bild = nichts
                 string projektOrdner = AppDomain.CurrentDomain.BaseDirectory; //Pfad zum Ordner
-                string vollerPfad = System.IO.Path.Combine(projektOrdner, "Images", aktuelle.BildPfad); //Pfad zum Images Ordner
+                string vollerPfad = System.IO.Path.Combine(projektOrdner, "Images2", aktuelle.BildPfad); //Pfad zum Images Ordner
 
                 if (System.IO.File.Exists(vollerPfad))
                 {
-                    PokemonBild.Source = new BitmapImage(new Uri(vollerPfad));
+                    BitmapImage bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.UriSource = new Uri(vollerPfad, UriKind.Absolute); // NEU: Absolute Pfadangabe
+
+                    // NEU: OnLoad verhindert, dass die Bilddatei vom Programm gesperrt wird.
+                    // Das ist wichtig, damit du Bilder löschen oder ändern kannst, während das Programm läuft.
+                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
+
+                    bitmap.EndInit();
+                    PokemonBild.Source = bitmap;
                 }
                 else
                 {
